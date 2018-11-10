@@ -3,12 +3,16 @@
   "defaultVariables": null,
   "swaggerGenerator": {
     "webApiToSwagger": {
-      "controllerNames": [],
-      "isAspNetCore": false,
+      "controllerNames": [
+        "MyFirstRestApi.Controllers.AuthorController",
+        "MyFirstRestApi.Controllers.BookController",
+        "MyFirstRestApi.Controllers.ValuesController"
+      ],
+      "isAspNetCore": true,
       "resolveJsonOptions": false,
       "defaultUrlTemplate": "api/{controller}/{id?}",
       "addMissingPathParameters": false,
-      "defaultPropertyNameHandling": "Default",
+      "defaultPropertyNameHandling": "CamelCase",
       "defaultReferenceTypeNullHandling": "Null",
       "defaultEnumHandling": "Integer",
       "flattenInheritanceHierarchy": false,
@@ -76,7 +80,9 @@
       "queryNullValue": "",
       "className": "{controller}Client",
       "operationGenerationMode": "MultipleClientsFromPathSegments",
-      "additionalNamespaceUsages": [],
+      "additionalNamespaceUsages": [
+        "MyFirstRestApi.Contract.Dto"
+      ],
       "additionalContractNamespaceUsages": [],
       "generateOptionalParameters": false,
       "generateJsonMethods": true,
@@ -89,7 +95,7 @@
       "wrapResponseMethods": [],
       "generateResponseClasses": true,
       "responseClass": "SwaggerResponse",
-      "namespace": "MyFirstApi.Clients",
+      "namespace": "MyFirstApi.Client",
       "requiredPropertiesMustBeDefined": true,
       "dateType": "System.DateTime",
       "jsonConverters": null,
@@ -102,7 +108,7 @@
       "dictionaryInstanceType": null,
       "arrayBaseType": "System.Collections.ObjectModel.ObservableCollection",
       "dictionaryBaseType": "System.Collections.Generic.Dictionary",
-      "classStyle": "Poco",
+      "classStyle": "Inpc",
       "generateDefaultValues": true,
       "generateDataAnnotations": true,
       "excludedTypeNames": [],
